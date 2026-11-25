@@ -631,3 +631,59 @@ body {
 .enquiry-form button:hover {
   background: #edcf83;
 }
+
+/* TunePulse Digital - Contact Form Styling Fix */
+
+.contact-box .enquiry-form {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+  width: 100% !important;
+  margin-top: 24px !important;
+}
+
+.contact-box .enquiry-form input,
+.contact-box .enquiry-form textarea {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 15px 16px !important;
+  margin: 0 !important;
+  background: #0b0c0e !important;
+  color: #ffffff !important;
+  border: 1px solid #343434 !important;
+  border-radius: 3px !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  outline: none !important;
+}
+
+.contact-box .enquiry-form input::placeholder,
+.contact-box .enquiry-form textarea::placeholder {
+  color: #999999 !important;
+}
+
+.contact-box .enquiry-form input:focus,
+.contact-box .enquiry-form textarea:focus {
+  border-color: #d9b568 !important;
+}
+
+.contact-box .enquiry-form textarea {
+  min-height: 130px !important;
+  resize: vertical !important;
+}
+
+.contact-box .enquiry-form button {
+  display: block !important;
+  width: 100% !important;
+  margin-top: 5px !important;
+  padding: 17px !important;
+  background: #d9b568 !important;
+  color: #080808 !important;
+  border: 1px solid #d9b568 !important;
+  border-radius: 3px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+}
