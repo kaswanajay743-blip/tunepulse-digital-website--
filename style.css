@@ -52,3 +52,76 @@ footer .brand-logo{width:54px;height:54px}
   display: block;
   border-radius: 50%;
 }
+
+/* FIX: Vinyl record stays in its original position */
+.hero-art {
+    position: relative;
+    overflow: visible;
+}
+
+/* Remove the extra background circle */
+.hero-art .orb {
+    display: none !important;
+}
+
+/* Vinyl record: fixed position + smooth rotation */
+.hero-art .record {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    right: 8%;
+    top: 50%;
+    left: auto;
+    margin: 0;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    overflow: hidden;
+    animation: vinyl-spin 14s linear infinite;
+}
+
+/* Keep the logo perfectly centered */
+.hero-art .record-label {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    overflow: hidden;
+    background: #d8b45c;
+}
+
+/* Logo should fit inside the round label */
+.hero-art .record-label img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
+}
+
+/* Rotation without moving the record up or down */
+@keyframes vinyl-spin {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+/* Mobile size */
+@media (max-width: 768px) {
+    .hero-art .record {
+        width: 240px;
+        height: 240px;
+        right: 0;
+        top: 50%;
+    }
+
+    .hero-art .record-label {
+        width: 75px;
+        height: 75px;
+    }
+}
