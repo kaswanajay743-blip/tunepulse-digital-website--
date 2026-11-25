@@ -4,7 +4,6 @@
 .brand-logo{display:block;width:64px;height:64px;object-fit:contain;border-radius:50%;background:#080a0d}
 footer .brand-logo{width:54px;height:54px}
 @media(max-width:700px){.brand-logo{width:54px;height:54px}footer .brand-logo{width:46px;height:46px}}
-
 /* Fix TunePulse vinyl logo */
 .hero-art {
   position: relative;
@@ -12,26 +11,38 @@ footer .brand-logo{width:54px;height:54px}
 }
 
 .record {
-  position: absolute;
-  width: 360px;
-  height: 360px;
-  right: 8%;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  overflow: hidden;
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    overflow: hidden;
+    animation: spin 12s linear infinite;
+}
+  
+.record-label {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    overflow: hidden;
+    background: #d8b45c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.record-label {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  overflow: hidden;
-  background: #d8b45c;
+.record-label img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
 }
 
 .record-label img {
