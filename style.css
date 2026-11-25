@@ -583,3 +583,51 @@ body {
   }
 
 }
+
+/* TunePulse Digital Enquiry Form */
+
+.enquiry-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 16px;
+  background: #0b0c0e;
+  border: 1px solid #343434;
+  color: #ffffff;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+  border-radius: 2px;
+}
+
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+  border-color: #d9b568;
+}
+
+.enquiry-form input::placeholder,
+.enquiry-form textarea::placeholder {
+  color: #888888;
+}
+
+.enquiry-form textarea {
+  resize: vertical;
+}
+
+.enquiry-form button {
+  cursor: pointer;
+  border: none;
+  font: inherit;
+  font-weight: 700;
+  padding: 16px;
+}
+
+.enquiry-form button:hover {
+  background: #edcf83;
+}
