@@ -208,3 +208,169 @@ body {
 .section {
   border-color: rgba(255, 255, 255, 0.07);
 }
+
+/* =========================================
+   TUNEPULSE DIGITAL — FINAL PREMIUM DESIGN
+   Preserve existing layout and vinyl animation
+========================================= */
+
+/* 1. Premium dark background and gold lighting */
+body {
+  background: #08090b;
+  color: #f5f5f2;
+}
+
+.hero {
+  background:
+    radial-gradient(
+      circle at 78% 45%,
+      rgba(218, 181, 105, 0.09),
+      transparent 32%
+    ),
+    linear-gradient(115deg, #08090b 45%, #101216 100%);
+}
+
+/* 2. Keep vinyl in the hero section */
+.hero-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+  min-width: 0;
+}
+
+/* Remove the unwanted extra circle */
+.hero-art .orb {
+  display: none !important;
+}
+
+/* 3. Vinyl — fixed position, smooth rotation */
+.hero-art .record {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  right: 6%;
+  left: auto;
+  top: 50%;
+  margin: 0;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  overflow: hidden;
+  animation: vinyl-spin 18s linear infinite;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.75),
+    0 0 45px rgba(218, 181, 105, 0.07);
+}
+
+/* 4. Center logo — no extra gold disc */
+.hero-art .record-label {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  overflow: hidden;
+  background: #08090b;
+  padding: 0;
+
+  box-shadow:
+    0 0 0 3px rgba(218, 181, 105, 0.18),
+    0 0 25px rgba(218, 181, 105, 0.12);
+}
+
+.hero-art .record-label img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  display: block;
+}
+
+/* 5. Smooth vinyl rotation without vertical movement */
+@keyframes vinyl-spin {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/* 6. Premium navigation */
+.nav {
+  background: rgba(8, 9, 11, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(218, 181, 105, 0.15);
+}
+
+/* 7. Gold buttons */
+.button {
+  transition: all 0.3s ease;
+}
+
+.button.primary:hover {
+  background: #f0d18b;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(218, 181, 105, 0.22);
+}
+
+.button.secondary:hover {
+  border-color: #d8b565;
+  color: #d8b565;
+  transform: translateY(-3px);
+}
+
+/* 8. Service cards */
+.service {
+  transition: all 0.35s ease;
+  border-color: #292c31;
+}
+
+.service:hover {
+  transform: translateY(-7px);
+  border-color: rgba(218, 181, 105, 0.45);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* 9. Gold headings */
+.hero h1 span,
+.section h2 span,
+.contact h2 span {
+  text-shadow: 0 0 35px rgba(218, 181, 105, 0.08);
+}
+
+/* 10. Mobile layout */
+@media (max-width: 800px) {
+  .hero-art {
+    height: 340px;
+    overflow: visible;
+  }
+
+  .hero-art .record {
+    width: 245px;
+    height: 245px;
+    right: 0;
+  }
+
+  .hero-art .record-label {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .hero-art .record {
+    animation-duration: 60s;
+  }
+
+  .button,
+  .service {
+    transition: none;
+  }
+}
