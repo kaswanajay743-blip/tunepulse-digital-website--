@@ -125,3 +125,6 @@ footer .brand-logo{width:54px;height:54px}
         height: 75px;
     }
 }
+.floating.f1 {
+  display: none !important;
+}
